@@ -1,14 +1,26 @@
-from flask import Flask
+from queue import Queue
+from typing import Sequence
+
+from flask import Flask, Response
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
-cache = {"value": "hej"}
+listeners = [] # type: Sequence[Queue]
 
-@app.route("/set/<value>")
-def set(value: str):
-    cache["value"] = value
-    return f"set value {value}"
+@app.route("/broadcast/<value>")
+def broadcast(value: str):
+    for l in listeners:
+        l.put_nowait(value)
+    return f"broadcasting value {value}"
 
-@app.route("/")
-def hello_world():
-    return cache["value"]
+@app.route("/listen")
+def listen():
+    def stream():
+        message_queue = Queue()
+        listeners.append(message_queue)
+        while True:
+            msg =  message_queue.get()
+            yield f"data: {msg}\n\n"
+    return Response(stream(), mimetype="text/event-stream")
