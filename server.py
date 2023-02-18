@@ -11,14 +11,14 @@ listeners = [] # type: Sequence[Queue]
 
 descriptions = {
     "01.mp4" : {
-        "title": "Genuary 01 - Perfect loop",
+        "title": "Genuary 01 - Cold welding",
         "medium": "Blender",
-        "text": ""
+        "text": "Exploring scale ambiguity with an endlessly looping zoom."
     },
     "02.mp4" : {
         "title": "Genuary 02 - 10 minutes",
         "medium": "Blender",
-        "text": ""
+        "text": "Hours spent trying to polish a piece that was meant to be done in 10 minutes."
     },
     "03.mp4" : {
         "title": "Genuary 03 - Glitch",
@@ -28,22 +28,22 @@ descriptions = {
     "04.mp4" : {
         "title": "Genuary 04 - Intersections",
         "medium": "Blender",
-        "text": ""
+        "text": "Briliant intersections of soap bubbles."
     },
     "05.mp4" : {
         "title": "Genuary 05 - Debug UI",
         "medium": "Blender",
-        "text": ""
+        "text": "Visualizing the indices and offset fields driving the bubbles from 04."
     },
     "06.mp4" : {
         "title": "Genuary 06 - Steal like an artis",
         "medium": "Blender",
-        "text": ""
+        "text": "Stealing and animating the beutifull irises by Ulla Wiggen."
     },
     "07.mp4" : {
         "title": "Genuary 07 - Däggdjur",
         "medium": "Python",
-        "text": ""
+        "text": "Sampling a bit more than the palette from \"Däggdjur\", maybe the greatest album of all time."
     }
 }
 
