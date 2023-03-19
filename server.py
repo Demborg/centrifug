@@ -15,6 +15,11 @@ descriptions = {
         "medium": "Blender",
         "text": "Exploring scale ambiguity with an endlessly looping zoom."
     },
+    "01-1.mp4" : {
+        "title": "Scanning",
+        "medium": "Blender",
+        "text": "Earlier experiments with endlessly looping cubes."
+    },
     "02.mp4" : {
         "title": "Genuary 02 - 10 minutes",
         "medium": "Blender",
@@ -24,6 +29,16 @@ descriptions = {
         "title": "Genuary 03 - Glitch",
         "medium": "Audacity, Spreadsheets",
         "text": "A circular path in the frequency/Q-space of a notch filter applied to a self portrait."
+    },
+    "03-1.mp4" : {
+        "title": "Dithering",
+        "medium": "Blender",
+        "text": "Dithering by casting shadows from moving balls."
+    },
+    "03-2.mp4" : {
+        "title": "En krokus, flera kroki",
+        "medium": "Blender, Photography",
+        "text": "A bad pun begging to become art through nudity."
     },
     "04.mp4" : {
         "title": "Genuary 04 - Intersections",
@@ -39,6 +54,21 @@ descriptions = {
         "title": "Genuary 06 - Steal like an artis",
         "medium": "Blender",
         "text": "Stealing and animating the beutifull irises by Ulla Wiggen."
+    },
+    "06-1.mp4" : {
+        "title": "Cheap copies 01 - Sliding Zeus XL",
+        "medium": "Blender",
+        "text": "Trying to recreate Sliding Zeus XL by Andreas Wannerstedt in my favourite software."
+    },
+    "06-2.mp4" : {
+        "title": "Cheap copies 02 - Chromie Squiggle",
+        "medium": "Blender",
+        "text": "Trying to recreate the Chromeie Squiggles by Archipelago in my favourite software."
+    },
+    "06-3.mp4" : {
+        "title": "Cheap copies 03 - The red spot",
+        "medium": "Blender",
+        "text": "Trying to recreate The Red Spot by Six N. Five in my favourite software."
     },
     "07.mp4" : {
         "title": "Genuary 07 - Däggdjur",
