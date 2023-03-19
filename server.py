@@ -1,11 +1,15 @@
 from queue import Queue
 from typing import Sequence
+from datetime import datetime
+from pathlib import Path
 
 from flask import Flask, Response, render_template
 from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
+
+database = Path("database.csv")
 
 listeners = [] # type: Sequence[Queue]
 
@@ -81,6 +85,9 @@ descriptions = {
 def broadcast(value: str):
     for l in listeners:
         l.put_nowait(value)
+
+    with database.open("a") as file:
+        file.write(f"{datetime.now()},{value}\n")
     return render_template("page.html", video=value, info=descriptions[value])
 
 @app.route("/listen")
@@ -92,3 +99,7 @@ def listen():
             msg =  message_queue.get()
             yield f"data: {msg}\n\n"
     return Response(stream(), mimetype="text/event-stream")
+
+@app.route("/stats")
+def stats():
+    return database.read_text() if database.is_file() else ""
